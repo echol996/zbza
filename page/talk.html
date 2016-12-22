@@ -1,0 +1,17 @@
+<div class="charPter">
+	
+	<div class="cont_ent">
+		<div class="charpter" ng-bind="bb.titel"></div>
+		<ul class="tips clearfix">
+			<li ng-repeat="item in bb.tips">{{item}}</li>
+		</ul>
+		<div class="contentr" ng-bind-html='bb.html'></div>
+	</div>
+	<!--底部-->
+	<div class="bar bar-footer">
+	  <button class="iconfont icon-back tab-item button-clear"></button>
+	  <button class="iconfont icon-comments tab-item button-clear"></button>
+	  <button class="iconfont icon-favorite tab-item button-clear"></button>
+	  <button class="iconfont icon-set tab-item button-clear"></button>
+	</div>
+</div>

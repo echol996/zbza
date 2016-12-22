@@ -1,0 +1,42 @@
+<div class="topLoading" style="display: none;">
+	<svg class="icon" aria-hidden="true" id="toploading">
+		<use xlink:href="#icon-taiyangrichu"></use>
+	</svg>
+</div>
+<div class="toDayDetail">
+	<div class="bar bar-header bar-opacity" id="bar-header">
+		<div class="buttons">
+			<a href="#main/home" class="button button-icon iconfont icon-back"></a>
+		</div>
+		<h1 class="title" ng-bind="abc.activeTitle"></h1>
+	</div>
+	
+	<div class="swiper-container toDayDetailBanner">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" ng-repeat="item in abc.imggroup">
+				<img ng-src='{{item}}' width="100%" />
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<div class="contaier clearfix">
+		<h2 class="fs16 clearfix"><span class="fl">{{abc.activeTitle}}</span><span class="fs14 fr ccc" ng-click="goMap(abc.address)"><i>地图</i><span class="iconfont icon-target"></span></span></span></h2>
+		<p>地址：{{abc.address}}</p>
+		<p>电话：{{abc.tel}}</p>
+		<p><span class="fl">价格：￥{{abc.activePrice}}</span><span class="fr {{pinFen}}"></span></p>
+	</div>
+	<div class="detailinfo">
+		<p class="detailicon clearfix"><span ng-repeat="item in abc.tips" class="mr20 fl mt20"><i class="iconfont {{item.icon}} mr10"></i><em>{{item.name}}</em></span></p>
+	</div>
+	<div class="summary" ng-bind-html="abc.detail">
+		
+	</div>
+	<!--底部-->
+	<div class="detailFooter">
+		<a class="collect tac fs16 fl"><i class="iconfont icon-star"></i><span>收藏</span></a>
+		<a class="share tac fs16 fl"><i class="iconfont icon-temperature"></i><span>分享</span></a>
+		<a class="tellphone tac fs16 fl">电话咨询</a>
+		<a class="online tac fs16 fl">在线预约</a>
+	</div>
+	<div id="allmap" ng-class="{allMapActive:info.map=='yes'}"></div>
+</div>

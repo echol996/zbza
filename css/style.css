@@ -1,0 +1,17 @@
+.bar-footer{
+	height: 54px;
+	position: fixed;
+	bottom: 0;
+}
+.tab-item .icon{
+	height: 26px;
+	line-height: 26px;
+	font-size: 22px;
+}
+.tab-item.active{
+	color: #FF3B30;
+}
+.homeBanner{
+	width: 100%;
+	height: 190px;
+}

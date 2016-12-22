@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="lib/ionic/css/ionic.min.css"/>
+	    <!--ionic核心JS-->
+	    <script type="text/javascript" src="lib/ionic/js/ionic.bundle.js" ></script>
+	</head>
+	<body ng-app="todo" ng-controller="actionsheetCtl">
+		<ion-pane>
+			<ion-content>
+				<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+				<ion-list>
+					<ion-item ng-repeat="item in items" ng-bind="item.name"></ion-item>
+				</ion-list>
+			</ion-content>
+		</ion-pane>
+	    <script type="text/javascript" src="js/app.js" ></script>
+	</body>
+</html>

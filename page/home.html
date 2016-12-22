@@ -1,0 +1,63 @@
+<div class="bar bar-header bar-opacity" id="bar-header">
+	<div class="searchI">吃喝玩乐，一网打尽</div>
+	<button class="button button-clear iconfont icon-search"></button>
+</div>
+<!--商品详情-->
+
+<!--banner-->
+<div class="swiper-container homeBanner">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide" ng-repeat="item in b" ng-click='goCharpter(item.key)' ​nav-transition="ios" nav-direction="forward">
+			<img ng-src='{{item.url}}' width="100%" />
+			<p>{{item.titel}}</p>
+		</div>
+	</div>
+	<div class="swiper-pagination"></div>
+</div>
+<!--内容-->
+<div class="content">
+	<div class="c-title clearfix">
+		<h2 style="margin-bottom: 10px;">玩在武汉</h2>
+		<div class="card">
+			<div class="item item-text-wrap">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-diving-mask"></use>
+				</svg>
+				<span>好玩</span>
+			</div>
+		</div>
+		<div class="card">
+			<div class="item item-text-wrap">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-ghosts-pacman"></use>
+				</svg>
+				<span>去处</span>
+			</div>
+		</div>
+		<div class="card">
+			<div class="item item-text-wrap">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-torch"></use>
+				</svg>
+				<span>吃货</span>
+			</div>
+		</div>
+	</div>
+	<!--今日精选-->
+	<div class="toDay">
+		<div class="h1 title fb16">今日精选<span class="fr">更多</span></div>
+		<div class="ionic-pseudo">
+			<div class="list">
+				<a class="item item-thumbnail-left" ng-repeat="item in active" ng-click="toDayDetailShow(item.key)">
+					<img ng-src="{{item.photo}}">
+					<h3><span class="activeTitle fl ofh">{{item.activeTitle}}</span><span class="ffca fr">￥{{item.activePrice}}起</span></h3>
+					<p>{{item.address}}</p>
+					<p class="ffca fl"><span>{{item.renJun}}</span></p>
+					<p class="lookinfo fr"><span>查看详情</span></p>
+				</a>
+
+			</div>
+
+		</div>
+	</div>
+</div>

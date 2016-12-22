@@ -1,0 +1,49 @@
+<div class="charPter">
+	<div class="cont_ent">
+		<div class="charpter">
+			<h2  ng-bind="bb.titel"></h2>
+			<p>{{bb.time}}</p>
+		</div>
+		<div class="contentr" ng-bind-html='bb.html'></div>
+		<ul class="tips clearfix ml10 pb20">
+			<li ng-repeat="item in bb.tips" class="mr10">{{item}}</li>
+		</ul>
+	</div>
+	<div class="comment">
+		<p class="fs14 ml10">评论：</p>
+		<div class="commentC">
+			<div class="commentD clearfix" ng-repeat="item in bb.comment">
+				<div class="left-img fl">
+					<img ng-src="{{item.img}}">
+				</div>
+				<div class="detailL fl">
+					<p class="clearfix"><span class="fl">{{item.name}}</span><span class="fr">{{item.time}}</span></p>
+					<p>{{item.comment}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--底部-->
+	<div class="bar bar-footer">
+	  <button class="iconfont icon-back tab-item button-clear" ng-click="goBack()"></button>
+	  <button class="iconfont icon-comments tab-item button-clear" ng-click="modal.show()"></button>
+	  <button class="iconfont icon-favorite tab-item button-clear"></button>
+	  <button class="iconfont icon-set tab-item button-clear"></button>
+	</div>
+</div>
+<script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-light">
+          <h1 class="title">评论</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">取消</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <div class="list">
+            <label class="item item-input">
+              <textarea type="text" placeholder="仅限输入100个字哦~" style="height:200px;line-height: 26px;" ng-model="newUser" ></textarea>
+            </label>
+            <button class="button button-full button-assertive" ng-click="createContact(newUser)">发布</button>
+          </div>
+        </ion-content>
+      </ion-modal-view>
+    </script>

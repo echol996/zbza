@@ -1,0 +1,26 @@
+{
+  "name": "echoliu",
+  "version": "1.0.0",
+  "description": "1993918",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-less": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-postcss": "^6.2.0",
+    "gulp-uglify": "^2.0.0",
+    "postcss-px2rem": "^0.3.0",
+    "uglify": "^0.1.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,26 @@
+
+<ui-view></ui-view>
+
+<div class="topLoading">
+	<svg class="icon" aria-hidden="true" id="toploading">
+		<use xlink:href="#icon-taiyangrichu"></use>
+	</svg>
+</div>
+<div class="bar bar-footer">
+	<a class="tab-item" href="#main/home" ng-class="{active:info.now=='home'}" ng-click="info.now='home'" ​nav-transition="ios" nav-direction="forward">
+		<i class="icon iconfont icon-home"></i> 
+		主页
+	</a>
+	<a class="tab-item" href="#main/talk" ng-class="{active:info.now=='talk'}" ng-click="info.now='talk'" nav-transition="ios" nav-direction="forward">
+		<i class="icon iconfont icon-doodle"></i> 
+		宅圈
+	</a>
+	<a class="tab-item" href="#">
+		<i class="icon iconfont icon-notepad"></i> 
+		游记
+	</a>
+	<a class="tab-item" href="#">
+		<i class="icon iconfont icon-star"></i> 
+		我的
+	</a>
+</div>
